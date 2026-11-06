@@ -79,23 +79,23 @@ export default function Units() {
             <div className="relative flex rounded-l-lg w-81.5 justify-center items-center">
                 <input
                 type="text"
+                id='search-property'
                 placeholder='Search Property'
                 
-                className="p-3 rounded-l-lg w-full"
+                className="p-3 rounded-l-lg w-full focus:outline-none focus:ring-0"
                 value ={search}
                 onChange={(e) => {setSearch(e.target.value)}}
                 />
-                <img
-                src={Lens}
-                className='absolute w-8 right-[5%]'
-                />
+                <label for='search-property' className='absolute w-8 right-[5%]'>
+                    <img src={Lens}/>
+                </label>
             </div>
 
             <div className="w-px h-12 bg-red-100"></div>
             
             {/* Bedrooms */}
             <select
-            className='p-3 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={bedrooms}
             onChange={(e) => setBedrooms(e.target.value)}
             >
@@ -115,7 +115,7 @@ export default function Units() {
 
             {/* Developer */}
             <select
-            className='p-3 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={developer}
             onChange={(e) => setDeveloper(e.target.value)}
             >
@@ -134,7 +134,7 @@ export default function Units() {
             
             {/* Zone */}
             <select
-            className='p-3 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={zone}
             onChange={(e) => setZone(e.target.value)}
             >
@@ -153,7 +153,7 @@ export default function Units() {
 
             {/* Project */}
             <select
-            className='p-3 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={project}
             onChange={(e) => setProject(e.target.value)}
             >
@@ -172,7 +172,7 @@ export default function Units() {
             
             {/* Status */}
             <select
-            className='p-3 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={status}
             onChange={(e) => setStatus(e.target.value)}
             >
@@ -188,7 +188,7 @@ export default function Units() {
 
             {/* Price */}
             <select
-            className='p-3 rounded-r-lg w-43.5'
+            className='p-3 rounded-r-lg w-43.5 focus:outline-none focus:ring-0'
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             >

@@ -7,7 +7,7 @@ import Twitter from '../assets/icons/link_icons/Twitter.svg'
 
 export default function Footer() {
   return (
-    <footer className='h-93.5 bg-[#FAFAFA] relative bottom-0 w-full pt-9 pr-45.75 9 pl-43 font-lato text-[16px] mt-36.25'>
+    <footer className='min-h-93.5 h-auto bg-[#FAFAFA] w-full pt-9 pr-45.75 pb-9 pl-43 font-lato text-[16px] mt-36.25 -mb-9'>
         <div className=''>
             <div className='grid grid-cols-4 items-center text-dark'>
                 <div>
@@ -43,7 +43,7 @@ export default function Footer() {
                 <div>
                     <p className='mb-8.5'>Get in touch</p>
                     
-                    <form className='flex flex-row'>
+                    <form method='POST' className='flex flex-row'>
                         <input type="text" placeholder='Get product updates' className='w-62 h-11.5 border border-red-100 rounded-l-md pt-4 pr-2 pb-4 pl-4' />
                         <button className='bg-red-100 pt-4 pr-2 pb-4 pl-2 h-11.5 rounded-r-md flex justify-center items-center cursor-pointer'>
                             <img src={Arrow} alt="Arrow" className='w-3.25 mt-4.25 mb-4.25 ml-4.5 mr-[16.75px]' />
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
         
         <div className='flex items-center justify-center text-dark'>
-            <p className='mt-10 mb-9'>© 2026 Grand Atlas. All rights reserved</p>
+            <p className='mt-10'>© 2026 Grand Atlas. All rights reserved</p>
         </div>
     </footer>
   )

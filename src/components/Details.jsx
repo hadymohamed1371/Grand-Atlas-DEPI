@@ -39,7 +39,7 @@ export default function Details({title, price, specs, size, bedrooms, bathrooms,
                 {buttons &&
                 <div className="flex justify-between">
                     <a className='' href='https://wa.me/1247859622'><div className='w-87 h-14 bg-[#009500] rounded-lg text-[20px] text-[#EEEEEE] font-lato font-bold flex justify-center items-center cursor-pointer'>Contact via WhatsApp</div></a>
-                    <a className='' href='' ><div className="w-87 h-14 border border-red-100 rounded-lg text-[20px] text-red-100 font-lato font-bold flex justify-center items-center ">Call</div></a>
+                    <a className='' href='tel:+201247859622' ><div className="w-87 h-14 border border-red-100 rounded-lg text-[20px] text-red-100 font-lato font-bold flex justify-center items-center ">Call</div></a>
                 </div>
                 }
             </div>

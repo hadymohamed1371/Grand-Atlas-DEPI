@@ -17,7 +17,7 @@ export default function Form() {
                 <input type="number" id="phone" name="phone" className="bg-[#F7F7F7] border border-dark-10 block rounded-lg p-3 mt-1 mb-4 h-14.5" />
 
             <label htmlFor="message">Message</label>
-            <input type="email" id="message" name="message" className="bg-[#F7F7F7] border border-dark-10 block text-start rounded-lg p-3 mt-1 mb-10.5 h-35" />
+            <textarea type="email" id="message" name="message" className="bg-[#F7F7F7] border border-dark-10 block text-start rounded-lg p-3 mt-1 mb-10.5 h-35"></textarea>
         </div>
         <div className="mt-auto">
             <Button 

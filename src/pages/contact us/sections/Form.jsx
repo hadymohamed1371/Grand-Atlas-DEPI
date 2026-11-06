@@ -3,7 +3,7 @@ import Button from '../../../components/Button'
 
 export default function Form() {
   return (
-    <form className='font-playfair border border-[#E2E2E2] p-7.5 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] rounded-3xl w-168.25 h-183.25 flex flex-col'>
+    <form method='POST' className='font-playfair border border-[#E2E2E2] p-7.5 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] rounded-3xl w-168.25 h-183.25 flex flex-col'>
         <p className="text-[26px] font-semibold">Send us a message</p>
 
         <div className="flex flex-col text-[20px] font-medium mt-9">

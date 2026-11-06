@@ -1,6 +1,6 @@
 import React from 'react'
 
-import LocationPin from '../../../assets/icons/akar-icons_location.svg'
+// import LocationPin from '../../../assets/icons/akar-icons_location.svg'
 import Mail from '../../../assets/icons/lucide_mail.svg'
 import Phone from '../../../assets/icons/boxicons_mobile.svg'
 import Telephone from '../../../assets/icons/line-md_phone.svg'
@@ -23,10 +23,10 @@ export default function Contact_Information() {
 
             <div className="flex flex-col gap-9">
                 <div className="text-[18px] text-red-100 font-lato font-medium flex flex-col gap-5">
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                         <img src={LocationPin} className='w-6' />
                         <p>Minusio, Lake Maggiore, Switzerland — ref. LOC1771</p>
-                    </div>
+                    </div> */}
                     <div className="flex gap-2">
                         <img src={Mail} className='w-6' />
                         <p>Grand.Atlas.Support@gmail.com</p>

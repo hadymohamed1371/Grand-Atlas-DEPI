@@ -28,7 +28,7 @@ export default function Navbar() {
             </Link>
         </ul>
 
-        <button className='w-27.5 h-8.75 text-white rounded-[5px] bg-linear-to-r from-red-100 to-red-50 mr-9'>
+        <button className='w-27.5 h-8.75 text-white rounded-[5px] bg-linear-to-r from-red-100 to-red-50 mr-9 cursor-pointer'>
             Register
         </button>
         

@@ -7,6 +7,15 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     port: 3000,
-    
+    proxy: {
+      '/api': {
+        target: 'https://white-seahorse-266682.hostingersite.com',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
+  },
+  build: {
+    assetsInlineLimit: 0, 
   },
 })

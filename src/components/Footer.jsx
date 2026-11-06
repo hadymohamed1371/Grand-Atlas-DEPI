@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../assets/images/LogoOption.svg'
 import Arrow from '../assets/icons/arrows-down-top-move-1.svg'
-import LinkedIn from '../assets/icons/link_icons/LinkedIn.svg'
+import LinkedIn from '../assets/icons/link_icons/Linkedin.svg'
 import Facebook from '../assets/icons/link_icons/facebook.svg'
 import Twitter from '../assets/icons/link_icons/Twitter.svg'
 

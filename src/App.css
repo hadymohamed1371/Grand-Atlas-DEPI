@@ -1,10 +1,10 @@
 @import "tailwindcss";
+@import url('https://googleapis.com');
+
+
 @plugin "daisyui" {
   themes: light --default;
 }
-
-@import url('https://googleapis.com');
-
 
 @theme {
 

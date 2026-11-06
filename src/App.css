@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@import url('https://googleapis.com');
+
+
+@theme {
+
+    --font-lato: 'Lato', sans-serif;
+    --font-playfair: "Playfair", serif;
+
+    --color-red-100: #8E1616;
+    --color-red-70: #A22A2A;
+    --color-red-50: #C34B4B;
+    --color-dark-30: #847D7D;
+    --color-dark-100: #1D1616;
+    --color-dark-50: #554E4E;
+    --color-dark-10: #CEC7C7;
+    --color-dark: #0A142F;
+    --color-beige-100: #A18E77;
+    
+
+}

@@ -1,0 +1,215 @@
+/* Creates equal spacing between slides */
+.future-landmarks-slider .slick-list {
+    margin: 0 -10px;
+}
+
+/* Makes all slides stretch to the same height */
+.future-landmarks-slider .slick-track {
+    display: flex !important;
+    align-items: stretch;
+}
+
+.future-landmarks-slider .slick-track::before,
+.future-landmarks-slider .slick-track::after {
+    display: none;
+    content: none;
+}
+
+.future-landmarks-slider .slick-slide {
+    height: auto;
+    flex: 0 0 auto;
+}
+
+/* Adds 10px padding on both sides of each card */
+.future-landmarks-slider .slick-slide > div {
+    height: 100%;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.future-landmarks-slider .future-landmarks-dots {
+    position: static;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    margin: 24px 0 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+/* Individual dot */
+.future-landmarks-slider .future-landmarks-dots li {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+/* Dot button */
+.future-landmarks-slider .future-landmarks-dots li button {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+}
+
+/* Remove Slick's default dot */
+.future-landmarks-slider .future-landmarks-dots li button::before {
+    display: none;
+    content: none;
+}
+
+/* INACTIVE DOT */
+.future-landmarks-slider .future-landmarks-dot {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    background-color: #D9D9D9;
+
+    transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.future-landmarks-slider
+.future-landmarks-dots li.slick-active .future-landmarks-dot {
+    width: 60px;
+    height: 12px;
+    border-radius: 9999px;
+
+    background-color: #8E1616;
+}
+
+.future-landmarks-slider .slick-list {
+    padding-bottom: 12px;
+}
+
+
+
+/* .future-landmarks-slider .future-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #8E1616;
+    border-radius: 50%;
+
+    background-color: white;
+    color: #8E1616;
+
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+
+    padding: 0;
+}
+
+.future-landmarks-slider .future-prev {
+    left: -20px;
+}
+
+.future-landmarks-slider .future-next {
+    right: -20px;
+}
+
+.future-landmarks-slider .future-arrow:hover {
+    background-color: #8E1616;
+    color: white;
+}
+
+.future-landmarks-slider .future-arrow::before {
+    display: none;
+    content: none;
+} */
+
+
+
+.future-slider .future-prev {
+  left: 10px;
+}
+
+.future-slider .future-next {
+  right: 10px;
+}
+
+.future-slider .future-arrow::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* FUTURE LANDMARKS ARROWS */
+.future-landmarks-slider button.slick-prev,
+.future-landmarks-slider button.slick-next {
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 100 !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    padding: 0 !important;
+    border: 1px solid #8E1616 !important;
+    border-radius: 50% !important;
+
+    background-color: white !important;
+    color: #8E1616 !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: translateY(-50%) !important;
+    cursor: pointer;
+}
+
+/* Arrow positions */
+.future-landmarks-slider button.slick-prev {
+    left: 10px !important;
+    transition: background-color 0.4s ease, color 0.3s ease, border-color 0.4s ease;
+}
+
+.future-landmarks-slider button.slick-next {
+    right: 10px !important;
+    transition: background-color 0.4s ease, color 0.3s ease, border-color 0.4s ease;
+}
+
+/* Hide Slick's default arrow icons */
+.future-landmarks-slider button.slick-prev::before,
+.future-landmarks-slider button.slick-next::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Hover effect */
+.future-landmarks-slider button.slick-prev:hover,
+.future-landmarks-slider button.slick-next:hover {
+    background-color: #8E1616 !important;
+    color: white !important;
+}

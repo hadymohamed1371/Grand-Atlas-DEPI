@@ -1,0 +1,221 @@
+
+:root {
+    --dot-inactive-color: #D9D9D9;
+    --dot-active-color: #8E1616;
+}
+
+/* The entire dots container */
+.masterpieces-slider .masterpieces-dots {
+    position: static;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    margin: 55px 0 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+/* Individual dot container */
+.masterpieces-slider .masterpieces-dots li {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+/* The button surrounding each dot */
+.masterpieces-slider .masterpieces-dots li button {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+}
+
+/* Hide react-slick's default dot design */
+.masterpieces-slider .masterpieces-dots li button::before {
+    display: none;
+    content: none;
+}
+
+/* INACTIVE DOT */
+.masterpieces-slider .masterpieces-dot {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    background-color: var(--dot-inactive-color);
+
+    transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.masterpieces-slider .masterpieces-dots li.slick-active .masterpieces-dot {
+    width: 60px;
+    height: 12px;
+    border-radius: 9999px;
+
+    background-color: var(--dot-active-color);
+}
+
+
+
+/* .masterpieces-slider .masterpieces-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #8E1616;
+    border-radius: 50%;
+
+    background-color: white;
+    color: #8E1616;
+
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+
+    padding: 0;
+}
+
+.masterpieces-slider .masterpieces-prev {
+    left: -20px;
+}
+
+.masterpieces-slider .masterpieces-next {
+    right: -20px;
+}
+
+.masterpieces-slider .masterpieces-arrow:hover {
+    background-color: #8E1616;
+    color: white;
+}
+
+.masterpieces-slider .masterpieces-arrow::before {
+    display: none;
+    content: none;
+} */
+
+
+.masterpieces-slider .masterpieces-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: white;
+  color: #8E1616;
+  border: 1px solid #8E1616;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  padding: 0;
+}
+
+.masterpieces-slider .masterpieces-prev {
+  left: 10px;
+}
+
+.masterpieces-slider .masterpieces-next {
+  right: 10px;
+}
+
+.masterpieces-slider .masterpieces-arrow::before {
+  display: none !important;
+  content: none !important;
+}
+
+.masterpieces-slider .slick-arrow.masterpieces-arrow {
+  display: flex !important;
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 28px !important;
+  line-height: 1 !important;
+  color: #8E1616 !important;
+  background: white !important;
+  border: 1px solid #8E1616 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 100 !important;
+}
+
+/* MASTERPIECES ARROWS */
+.masterpieces-slider button.slick-prev,
+.masterpieces-slider button.slick-next {
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 100 !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    padding: 0 !important;
+    border: 1px solid #8E1616 !important;
+    border-radius: 50% !important;
+
+    background-color: white !important;
+    color: #8E1616 !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: translateY(-50%) !important;
+    cursor: pointer;
+}
+
+/* Arrow positions */
+.masterpieces-slider button.slick-prev {
+    left: 10px !important;
+    transition: background-color 0.4s ease, color 0.3s ease, border-color 0.4s ease;
+}
+
+.masterpieces-slider button.slick-next {
+    right: 10px !important;
+    transition: background-color 0.4s ease, color 0.3s ease, border-color 0.4s ease;
+}
+
+/* Hide Slick's default arrow icons */
+.masterpieces-slider button.slick-prev::before,
+.masterpieces-slider button.slick-next::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Hover effect */
+.masterpieces-slider button.slick-prev:hover,
+.masterpieces-slider button.slick-next:hover {
+    background-color: #8E1616 !important;
+    color: white !important;
+}

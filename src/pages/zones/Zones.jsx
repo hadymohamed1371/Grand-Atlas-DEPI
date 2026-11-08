@@ -20,25 +20,19 @@ export default function Zones() {
         try {
             const response = await api.get("/zone");
             setZones(response.data);
-            console.log(response.data);
-            console.log(zones);
-            setLoading(false)
+            setLoading(false);
 
         } catch (error) {
             console.log("Error fetching zones", error);
-            setLoading(true)
+        } finally {
+            setLoading(false);
         }
 
     }
 
     useEffect(() => {
-        
         getZones();
     }, [])
-        
-
-        
-        
         
         return (
             <>

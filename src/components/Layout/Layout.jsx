@@ -5,10 +5,14 @@ import Footer from '../Footer'
 
 export default function Layout() {
   return (
-    <div>
-        <Navbar />
+    <div className="flex flex-col flex-1 min-h-screen">
+    <Navbar />
+
+    <main className="flex-1">
         <Outlet />
-        <Footer />
-    </div>
+    </main>
+
+    <Footer />
+</div>
   )
 }

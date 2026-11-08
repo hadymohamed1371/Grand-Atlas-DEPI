@@ -29,7 +29,7 @@ export default function Contact_Information() {
                     </div> */}
                     <div className="flex gap-2">
                         <img src={Mail} className='w-6' />
-                        <p>Grand.Atlas.Support@gmail.com</p>
+                        <a href="mailto:grand.atlas.support@gmail.com">Grand.Atlas.Support@gmail.com</a>
                     </div>
                     <div className="flex gap-2">
                         <img src={Phone} className='w-6' />
@@ -44,10 +44,10 @@ export default function Contact_Information() {
                 <div className="text-[23px] text-dark-30 font-playfair font-semibold flex flex-col gap-4">
                     <p>Follow us on Social media</p>
                     <div className="flex gap-3.25">
-                        <img src={Facebook} alt="Facebook" className='w-10.5' />
-                        <img src={Twitter} alt="Twitter" className='w-10.5' />
-                        <img src={Instagram} alt="Instagram" className='w-10.5' />
-                        <img src={TikTok} alt="TikTok" className='w-10.5' />
+                        <a href='https://facebook.com'><img src={Facebook} alt="Facebook" className='w-10.5' /></a>
+                        <a href='https://x.com'><img src={Twitter} alt="Twitter" className='w-10.5' /></a>
+                        <a href='https://instagram.com'><img src={Instagram} alt="Instagram" className='w-10.5' /></a>
+                        <a href='https://tiktok.com'><img src={TikTok} alt="TikTok" className='w-10.5' /></a>
                     </div>
                 </div>
 

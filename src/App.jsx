@@ -21,7 +21,7 @@ import Contact_us from './pages/contact us/Contact_us'
 function App() {
 
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen w-full'>
         <Routes>
             <Route element={<Layout />}>
                 <Route path='/' element={<Home />} />

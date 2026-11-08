@@ -17,7 +17,7 @@ export default function Contact_us() {
                 icons={false}
         />
 
-        <div className="mt-29.5 flex gap-5 px-9">
+        <div className="mt-29.5 flex justify-center items-center gap-5 px-9">
             <Contact_Information />
             <Form />
         </div>

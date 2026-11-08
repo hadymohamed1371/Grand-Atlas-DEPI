@@ -5,8 +5,11 @@ import Title from '../../../components/Title'
 import About_Frame from '../../../assets/images/Frame_10.png'
 
 import Button from '../../../components/Button'
+import { useNavigate } from 'react-router-dom';
 
 export default function About_Grand_Atlas() {
+
+    const navigate = useNavigate();
   return (
     <>
         <Title
@@ -23,6 +26,7 @@ export default function About_Grand_Atlas() {
                     <Button
                     buttonContent={"Know More"}
                     arrow={true}
+                    onClick={() => navigate('/contact-us')}
                     fullWidth={false}
                     />
                 </div>

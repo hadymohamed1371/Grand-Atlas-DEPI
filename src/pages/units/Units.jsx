@@ -40,10 +40,6 @@ export default function Units() {
             setLoading(false);
         }
     }
-    
-    useEffect(() => {
-        console.log(units);
-    }, [units])
 
     useEffect(() => {
         getUnits()
@@ -61,12 +57,6 @@ export default function Units() {
         )
     }))
 
-
-    // const result = filteredUnits(units, search, price, bedrooms)
-
-
-
-
   return (
     <div>
         <Hero
@@ -79,89 +69,106 @@ export default function Units() {
         />
 
         {/* Search */}
-        <div className="px-9 mt-51.5 flex justify-center items-center">
+        <div className="mx-9 mt-51.5 flex justify-between items-center border border-red-100 rounded-lg">
 
             {/* Title */}
-            <div className="flex border border-red-100 rounded-l-lg w-81.5 justify-center items-center">
+            <div className="relative flex rounded-l-lg w-81.5 justify-center items-center">
                 <input
                 type="text"
+                id='search-property'
                 placeholder='Search Property'
-                className="p-3 rounded-l-lg w-full"
+                
+                className="p-3 rounded-l-lg w-full focus:outline-none focus:ring-0"
                 value ={search}
                 onChange={(e) => {setSearch(e.target.value)}}
                 />
+                <label for='search-property' className='absolute w-8 right-[5%]'>
+                    <img src={Lens}/>
+                </label>
             </div>
+
+            <div className="w-px h-12 bg-red-100"></div>
             
             {/* Bedrooms */}
             <select
-            className='p-3 border border-red-100 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={bedrooms}
             onChange={(e) => setBedrooms(e.target.value)}
             >
                 <option className='text-[#BEBEBE]' value="">All Bedrooms</option>
                 <optgroup>
-                    {units.map((unit) => {
-                    return (
-                        <option className='' value={unit.bedrooms}>{unit.bedrooms} Bedrooms</option>
-                    )
-                    })}
+                    {[...new Set(units.map((unit) => unit.bedrooms).filter((bedrooms) => bedrooms !== null && bedrooms !== undefined && bedrooms !== ''))]
+                    .sort((a, b) => Number(a) - Number(b))
+                    .map((bedrooms) => (
+                        <option key={bedrooms} value={bedrooms}>
+                            {bedrooms} Bedrooms
+                        </option>
+                    ))}
                 </optgroup>
             </select>
 
+            <div className="w-px h-10 bg-red-100"></div>
+
             {/* Developer */}
             <select
-            className='p-3 border border-red-100 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={developer}
             onChange={(e) => setDeveloper(e.target.value)}
             >
                 <option className='text-[#BEBEBE]' value="">All Developers</option>
                 <optgroup>
-                    {units.map((unit) => {
-                    return (
-                        <option className='' value={unit.developerName_en}>{unit.developerName_en}</option>
-                    )
-                    })}
+                    {[...new Set(units.map((unit) => unit.developerName_en).filter(Boolean))].map((devName) => (
+                    <option key={devName} value={devName}>
+                        {devName}
+                    </option>
+))}
                 </optgroup>
                 
             </select>
             
+            <div className="w-px h-10 bg-red-100"></div>
+            
             {/* Zone */}
             <select
-            className='p-3 border border-red-100 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={zone}
             onChange={(e) => setZone(e.target.value)}
             >
                 <option className='text-[#BEBEBE]' value="">All Zones</option>
                 <optgroup>
-                    {units.map((unit) => {
-                    return (
-                        <option className='' value={unit.zoneName_en}>{unit.zoneName_en}</option>
-                    )
-                    })}
+                    {[...new Set(units.map((unit) => unit.zoneName_en).filter(Boolean))].map((zone) => (
+                        <option key={zone} value={zone}>
+                            {zone}
+                        </option>
+                    ))}
                 </optgroup>
                 
             </select>
 
+            <div className="w-px h-10 bg-red-100"></div>
+
             {/* Project */}
             <select
-            className='p-3 border border-red-100 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={project}
             onChange={(e) => setProject(e.target.value)}
             >
                 <option className='text-[#BEBEBE]' value="">All Projects</option>
                 <optgroup>
-                    {units.map((unit) => {
-                    return (
-                        <option className='' value={unit.projectName_en}>{unit.projectName_en}</option>
-                    )
-                    })}
+                    {[...new Set(units.map((unit) => unit.projectName_en).filter(Boolean))].map((projectName) => (
+                        <option key={projectName} value={projectName}>
+                            {projectName}
+                        </option>
+                    ))}
                 </optgroup>
                 
             </select>
+
+            <div className="w-px h-10 bg-red-100"></div>
             
             {/* Status */}
             <select
-            className='p-3 border border-red-100 w-43.5'
+            className='p-3 w-43.5 focus:outline-none focus:ring-0'
             value={status}
             onChange={(e) => setStatus(e.target.value)}
             >
@@ -172,19 +179,24 @@ export default function Units() {
                 </optgroup>
 
             </select>
+            
+            <div className="w-px h-10 bg-red-100"></div>
 
             {/* Price */}
             <select
-            className='p-3 border border-red-100 rounded-r-lg w-43.5'
+            className='p-3 rounded-r-lg w-43.5 focus:outline-none focus:ring-0'
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             >
                 <option className='text-[#BEBEBE]' value="">All Prices</option>
                 <optgroup>
+                    <option value="1000000">Up to 1000000EGP</option>
                     <option value="5000000">Up to 5000000EGP</option>
                     <option value="10000000">Up to 10000000EGP</option>
                     <option value="15000000">Up to 15000000EGP</option>
                     <option value="20000000">Up to 20000000EGP</option>
+                    <option value="25000000">Up to 25000000EGP</option>
+                    <option value="30000000">Up to 30000000EGP</option>
                 </optgroup>
 
             </select>
@@ -212,7 +224,7 @@ export default function Units() {
                         <span className="loading loading-spinner text-red-100 w-20"></span>
                     </div>
                     :
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-33 px-9 items-stretch">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-33 px-9 items-stretch relative">
             {filteredUnits.length > 0 ? (
                 filteredUnits.map((unit) => {
                     return (
@@ -237,7 +249,11 @@ export default function Units() {
                     )
                 }))
                 :
-                (<p className='text-[22px] text-dark-100 font-lato font-semibold'>No units found.</p>)
+                (<div className="w-full flex justify-center items-center absolute">
+                    <p className='text-[22px] text-dark-100 font-lato font-semibold'>
+                        No units found.
+                    </p>
+                </div>)
             }
                 
         </div>}

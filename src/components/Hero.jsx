@@ -5,8 +5,12 @@ import Twitter from '../assets/icons/link_icons/TwitterHeroIcon.svg'
 import Instagram from '../assets/icons/link_icons/InstagramHeroIcon.svg'
 import Tiktok from '../assets/icons/link_icons/TiktokHeroIcon.svg'
 import Button from './Button'
+import { useNavigate } from 'react-router-dom'
 
-export default function Hero({background, title, description, button, buttonContent, icons}) {
+export default function Hero({background, title, description, button, buttonContent, buttonOnClick, icons}) {
+
+    const navigate = useNavigate();
+
     return (
 
         <div className='relative w-full h-auto'>
@@ -22,14 +26,14 @@ export default function Hero({background, title, description, button, buttonCont
 
                 <p className=' text-dark-10 text-[20px] font-lato font-bold w-247 text-center mb-8'>{description}</p>
 
-                {button && <Button buttonContent={buttonContent} fullWidth={false} /> }
+                {button && <Button buttonContent={buttonContent} onClick={() => navigate({pathname: buttonOnClick})} fullWidth={false} /> }
                 
                 {icons &&
                 <div className='absolute w-12.5 flex flex-col left-9 bottom-14.75 gap-5.5'>
-                    <img src={Facebook} alt="Facebook" className='cursor-pointer' />
-                    <img src={Twitter} alt="Twitter" className='cursor-pointer' />
-                    <img src={Instagram} alt="Instagram" className='cursor-pointer' />
-                    <img src={Tiktok} alt="Tiktok" className='cursor-pointer' />
+                    <a href='https://facebook.com'><img src={Facebook} alt="Facebook" className='cursor-pointer' /></a>
+                    <a href='https://x.com'><img src={Twitter} alt="Twitter" className='cursor-pointer' /></a>
+                    <a href='https://instagram.com'><img src={Instagram} alt="Instagram" className='cursor-pointer' /></a>
+                    <a href='https://tiktok.com'><img src={Tiktok} alt="Tiktok" className='cursor-pointer' /></a>
                 </div>
                 }
             </div>

@@ -5,7 +5,7 @@ import Logo from '../assets/images/LogoOption_NoMargins.svg'
 export default function Navbar() {
 
     const navLinkClass = ({ isActive }) =>
-    `inline-block border-b-2 pb-1 transition-colors duration-300 ${
+    `inline-block border-b-[1.5px] pb-1 transition-colors duration-300 ${
         isActive
             ? 'text-red-100 border-red-100'
             : 'text-dark-30 border-transparent hover:text-red-100'

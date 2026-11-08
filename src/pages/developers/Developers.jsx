@@ -19,24 +19,19 @@ export default function Developers() {
         try {
             const response = await api.get("/developer");
             setDevelopers(response.data);
-            console.log(response.data);
-            console.log(developers);
             setLoading(false);
-
         } catch (error) {
             console.log("Error fetching developers", error);
+        } finally {
             setLoading(false);
         }
 
     }
 
-
     useEffect(() => {
         
         getDevelopers();
     }, [])
-
-
 
   return (
       <div>
@@ -60,15 +55,6 @@ export default function Developers() {
             {
                 developers.map((developer) => {
                     return (
-
-                            // <div key={developer.id} className='flex flex-col gap-2 w-auto border border-dark-30 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] rounded-2xl'>
-
-                            //     <img src={developer.images[0]} alt="" className='size-48 w-full rounded-t-2xl' />
-                            //     <div className="p-4">
-                            //         <p className='text-[20px] text-dark-100 font-playfair'>{developer.name_en}</p>
-                            //         <p className='text-[16px] text-dark-50 font-lato w-50'>{developer.description_en}</p>
-                            //     </div>
-                            // </div>
                             <Project_Card
                             card_image={developer.images[0]}
                             cardAltText={developer.name_en}
